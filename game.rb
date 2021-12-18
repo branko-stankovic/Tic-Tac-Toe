@@ -10,3 +10,4 @@ end
 
 new_game = Game.new
 new_game.welcome
+new_game.pick_side
