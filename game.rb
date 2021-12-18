@@ -10,7 +10,7 @@ class TicTacToe
 
   def new_game
     self.welcome
-    @board.display_board
+    @board.display
   end
 end
 

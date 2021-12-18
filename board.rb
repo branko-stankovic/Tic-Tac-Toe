@@ -5,7 +5,7 @@ class Board
     @game_board = [1,2,3,4,5,6,7,8,9]
   end
 
-  def display_board
+  def display
     puts "#{@game_board[0]} | #{@game_board[1]} | #{@game_board[2]}"
     puts "_ _ _ _ _"
     puts "#{@game_board[3]} | #{@game_board[4]} | #{@game_board[5]}"
