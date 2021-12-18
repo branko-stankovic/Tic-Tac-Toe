@@ -13,6 +13,3 @@ class Board
     puts "#{@game_board[6]} | #{@game_board[7]} | #{@game_board[8]}"
   end
 end
-
-board = Board.new
-board.display_board

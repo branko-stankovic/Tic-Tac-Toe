@@ -5,11 +5,12 @@ class TicTacToe
   include Player
   
   def initialize
-    
+    @board = Board.new
   end
 
   def new_game
     self.welcome
+    @board.display_board
   end
 end
 
