@@ -9,13 +9,4 @@ module Player
     puts
     puts 'The first player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner!'
   end
-
-  def pick_side
-    side = ''
-    until side.upcase == 'X' || side.downcase == 'Y'
-      puts 'Pick your team: X or Y?'
-      side = gets.chomp
-    end
-    puts "You picked team #{side.upcase}!"
-  end
 end
