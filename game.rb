@@ -1,13 +1,16 @@
 require_relative 'player'
 
-class Game
+class TicTacToe
   include Player
   
   def initialize
     @board = [1,2,3]
   end
+
+  def new_game
+    self.welcome
+  end
 end
 
-new_game = Game.new
-new_game.welcome
-new_game.pick_side
+game = TicTacToe.new
+game.new_game
