@@ -19,12 +19,13 @@ class TicTacToe
 
   def new_game
     self.welcome
-    @board.display
-    @board.play(@current_player, 1)
-    @board.display
-    switch_player
-    @board.play(@current_player, 1)
-    @board.display
+    loop do
+      @board.display
+      prompt_move
+      move = gets.chomp.to_i
+      @board.play(@current_player, move)
+      switch_player
+    end
   end
 end
 

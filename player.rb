@@ -13,4 +13,8 @@ module Player
   def position_already_played
     puts "That position has already been played"
   end
+
+  def prompt_move
+    print "Enter your move: "
+  end
 end
