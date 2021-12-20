@@ -12,4 +12,8 @@ class Board
     puts "_ _ _ _ _"
     puts "#{@game_board[6]} | #{@game_board[7]} | #{@game_board[8]}"
   end
+
+  def play(player, position)
+    @game_board[position - 1] = player
+  end
 end

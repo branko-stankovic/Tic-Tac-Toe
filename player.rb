@@ -1,7 +1,7 @@
 # module for interacting with the player
 module Player
   def welcome
-    puts `clear`
+    # puts `clear`
     puts 'Welcome to a game of Tic-Tac-Toe!'
     puts
     puts 'Player 1 plays as: X'

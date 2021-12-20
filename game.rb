@@ -11,6 +11,7 @@ class TicTacToe
   def new_game
     self.welcome
     @board.display
+    @board.play('X', 1)
   end
 end
 
