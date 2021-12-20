@@ -1,7 +1,7 @@
 # module for interacting with the player
 module Player
   def welcome
-    # puts `clear`
+    puts `clear`
     puts 'Welcome to a game of Tic-Tac-Toe!'
     puts
     puts 'Player 1 plays as: X'
@@ -16,5 +16,9 @@ module Player
 
   def prompt_move
     print "Enter your move: "
+  end
+
+  def display_tie
+    puts "It's a TIE!"
   end
 end

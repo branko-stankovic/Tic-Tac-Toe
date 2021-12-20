@@ -26,7 +26,7 @@ class TicTacToe
       @board.play(@current_player, move)
       if @board.is_a_tie?
         @board.display
-        puts "It's a tie!"
+        display_tie
         break
       end
       switch_player
