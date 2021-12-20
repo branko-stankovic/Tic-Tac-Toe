@@ -6,12 +6,25 @@ class TicTacToe
   
   def initialize
     @board = Board.new
+    @current_player = 'X'
+  end
+
+  def switch_player
+    if @current_player == 'X'
+      @current_player = 'O'
+    else
+      @current_player = 'X'
+    end
   end
 
   def new_game
     self.welcome
     @board.display
-    @board.play('X', 1)
+    @board.play(@current_player, 1)
+    @board.display
+    switch_player
+    @board.play(@current_player, 2)
+    @board.display
   end
 end
 
