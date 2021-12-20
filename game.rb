@@ -24,6 +24,11 @@ class TicTacToe
       prompt_move
       move = gets.chomp.to_i
       @board.play(@current_player, move)
+      if @board.is_a_tie?
+        @board.display
+        puts "It's a tie!"
+        break
+      end
       switch_player
     end
   end

@@ -27,4 +27,8 @@ class Board
   def is_empty?(position)
     @game_board[position - 1].class == Integer
   end
+
+  def is_a_tie?
+    @game_board.all? { |tile| tile.class == String }
+  end
 end
