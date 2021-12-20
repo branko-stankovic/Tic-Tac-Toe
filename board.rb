@@ -16,9 +16,9 @@ class Board
     puts "#{@game_board[6]} | #{@game_board[7]} | #{@game_board[8]}"
   end
 
-  def play(player, position)
+  def play(current_player, position)
     if is_empty?(position)
-      @game_board[position - 1] = player
+      @game_board[position - 1] = current_player
     else
       position_already_played
     end
