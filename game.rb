@@ -23,7 +23,7 @@ class TicTacToe
     @board.play(@current_player, 1)
     @board.display
     switch_player
-    @board.play(@current_player, 2)
+    @board.play(@current_player, 1)
     @board.display
   end
 end

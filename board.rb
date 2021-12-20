@@ -1,4 +1,7 @@
+require_relative 'player'
+
 class Board 
+  include Player
   attr_accessor :game_board
 
   def initialize
@@ -14,6 +17,14 @@ class Board
   end
 
   def play(player, position)
-    @game_board[position - 1] = player
+    if is_empty?(position)
+      @game_board[position - 1] = player
+    else
+      position_already_played
+    end
+  end
+
+  def is_empty?(position)
+    @game_board[position - 1] != 'X' && @game_board[position - 1] != 'Y'
   end
 end
