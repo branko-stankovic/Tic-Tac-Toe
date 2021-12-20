@@ -25,6 +25,6 @@ class Board
   end
 
   def is_empty?(position)
-    @game_board[position - 1] != 'X' && @game_board[position - 1] != 'Y'
+    @game_board[position - 1].class == Integer
   end
 end
