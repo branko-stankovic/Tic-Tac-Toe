@@ -32,6 +32,33 @@ class Board
     @game_board.all? { |tile| tile.class == String }
   end
 
+  def is_a_win?(current_player)
+    if @game_board[0] == current_player
+      if @game_board[1] == current_player && 
+        @game_board[2] == current_player
+        return true
+      elsif @game_board[3] == current_player &&
+        @game_board[6] == current_player
+        return true
+      elsif @game_board[4] == current_player && @game_board[8] == current_player
+        return true
+      end
+    elsif @game_board[4] == current_player
+      if @game_board[1] == current_player && @game_board[7] == current_player
+        return true
+      elsif @game_board[3] == current_player && @game_board[5] == current_player
+        return true
+      end
+    elsif
+      @game_board[8] == current_player
+      if @game_board[6] == current_player && @game_board[7] == current_player
+        return true
+      elsif @game_board[2] == current_player && @game_board[5] == current_player
+        return true
+      end
+    end
+  end
+
   def reset!
     @game_board = [1,2,3,4,5,6,7,8,9]
   end
