@@ -21,8 +21,11 @@ class TicTacToe
     self.welcome
     loop do
       @board.display
-      prompt_move
+      prompt_move(@current_player)
       move = gets.chomp.to_i
+      unless @board.is_empty?(move)
+        next
+      end
       @board.play(@current_player, move)
       if @board.is_a_tie?
         @board.display
