@@ -31,6 +31,10 @@ class TicTacToe
         @board.display
         display_tie
         break
+      elsif @board.is_a_win?(@current_player)
+        @board.display
+        display_win(@current_player)
+        break
       end
       switch_player
     end

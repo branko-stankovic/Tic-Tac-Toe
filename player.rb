@@ -21,4 +21,8 @@ module Player
   def display_tie
     puts "It's a TIE!"
   end
+
+  def display_win(current_player)
+    puts "Player #{current_player} wins the game!!!"
+  end
 end
