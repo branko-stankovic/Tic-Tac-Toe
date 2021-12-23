@@ -31,4 +31,8 @@ class Board
   def is_a_tie?
     @game_board.all? { |tile| tile.class == String }
   end
+
+  def reset!
+    @game_board = [1,2,3,4,5,6,7,8,9]
+  end
 end
